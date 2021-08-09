@@ -46,13 +46,18 @@ function finishQuiz(){
     let points = Math.floor((correctAnswer/questions.length) * 100);
 
     if(points > 30 && points < 60 ){
+        
+        document.querySelector('.scoreArea img').src = "legalcima.png";
         document.querySelector('.scoreText1').innerHTML = "Muito bom";
         document.querySelector('.scorePct').style.color = "#ffff00";
     }else if(points < 30){
-       
+        
+        document.querySelector('.scoreArea img').src= "legal.png"
         document.querySelector('.scoreText1').innerHTML = "Ta ruim hein?!";
         document.querySelector('.scorePct').style.color = "red";
+    
     }else if(points > 60){
+        document.querySelector('.scoreArea img').src = "prize.png";
         document.querySelector('.scoreText1').innerHTML = "Parabéns";
         document.querySelector('.scorePct').style.color = "green";
     }
